@@ -1,0 +1,155 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+#navegacion{
+    margin: auto;
+    width: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Quitar las viñetas*/
+UL LI{
+    list-style: none;
+}
+
+/*Estilo para los menus*/
+UL LI a{
+    text-decoration: none;
+    background-color: rgb(170, 22, 22);
+    color: rgb(233, 233, 233);
+    padding: 10px; 
+    display: block;
+    padding: 10px 15px;
+}
+
+UL LI a:hover{
+    background-color: brown;
+}
+
+body{
+    background-color: rgb(209, 200, 157);
+}
+
+UL>LI{
+    float: left;
+    position: relative;
+}
+
+UL LI UL LI{
+    float: none;
+}
+
+UL LI UL{
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+
+UL LI:hover>UL{
+    display: block;
+}
+
+UL LI UL LI{
+    position: relative;
+}
+
+UL LI UL LI UL{
+    right: -140px;
+    top: 8px;
+}
+
+header{
+    background-color: rgb(170, 22, 22);
+    height: 80px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    align-items: center;
+    display: flex;
+}
+
+header navegacion{
+    display: flex;
+    gap: 100px;
+}
+
+.portada{
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-image: url("portada.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.portada::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.texto-portada{
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.texto-portada h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.texto-portada p{
+    font-size: 22px;
+}
+
+header{
+    position: relative;
+    z-index: 1000;
+}
+
+.portada{
+    position: relative;
+    z-index: 1;
+}
+
+.contenido{
+    padding: 30px;
+}
+
+.bloque{
+    max-width: 900px;
+    margin: auto;
+}
+
+.imagen{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.imagen{
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.imagen img{
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
